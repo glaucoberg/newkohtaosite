@@ -1,9 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { toast } = useToast();
+
+  const handleLanguageClick = () => {
+    toast({
+      title: "Language Selection",
+      description: "Multilingual support coming soon! Available: EN, ES, DE, TH, CN",
+    });
+  };
+
+  const handlePlanTrip = () => {
+    toast({
+      title: "Plan Your Trip",
+      description: "Trip planning wizard coming soon!",
+    });
+  };
 
   const menuItems = [
     { label: "Dive Sites", href: "#dive-sites" },
@@ -42,11 +58,11 @@ const Navigation = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={handleLanguageClick}>
               <Globe className="h-4 w-4 mr-2" />
               EN
             </Button>
-            <Button variant="hero">
+            <Button variant="hero" onClick={handlePlanTrip}>
               Plan Your Trip
             </Button>
           </div>
@@ -76,11 +92,11 @@ const Navigation = () => {
               </a>
             ))}
             <div className="pt-4 space-y-2">
-              <Button variant="ghost" className="w-full">
+              <Button variant="ghost" className="w-full" onClick={handleLanguageClick}>
                 <Globe className="h-4 w-4 mr-2" />
                 Language
               </Button>
-              <Button variant="hero" className="w-full">
+              <Button variant="hero" className="w-full" onClick={handlePlanTrip}>
                 Plan Your Trip
               </Button>
             </div>

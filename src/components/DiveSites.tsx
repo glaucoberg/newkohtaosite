@@ -2,9 +2,32 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Waves, Fish, Anchor } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import divingImage from "@/assets/diving-scene.jpg";
 
 const DiveSites = () => {
+  const { toast } = useToast();
+
+  const handleBookDive = (siteName?: string) => {
+    toast({
+      title: "Book a Dive",
+      description: siteName ? `Booking for ${siteName}` : "Dive booking coming soon!",
+    });
+  };
+
+  const handleViewDetails = (siteName: string) => {
+    toast({
+      title: siteName,
+      description: "Viewing dive site details...",
+    });
+  };
+
+  const handleExploreAll = () => {
+    toast({
+      title: "All Dive Sites",
+      description: "Loading complete dive site catalog...",
+    });
+  };
   const diveSites = [
     {
       name: "Chumphon Pinnacle",
@@ -74,7 +97,7 @@ const DiveSites = () => {
               <Badge className="mb-4 bg-secondary">Featured Dive Site</Badge>
               <h3 className="text-3xl font-bold mb-2">Southwest Pinnacle</h3>
               <p className="text-lg mb-4">Experience vibrant coral formations and encounter schools of tropical fish in crystal-clear waters</p>
-              <Button variant="hero">Book a Dive Trip</Button>
+              <Button variant="hero" onClick={() => handleBookDive("Southwest Pinnacle")}>Book a Dive Trip</Button>
             </div>
           </div>
         </div>
@@ -106,7 +129,7 @@ const DiveSites = () => {
                   <p className="text-xs font-semibold text-foreground mb-1">Marine Life:</p>
                   <p className="text-xs text-muted-foreground">{site.highlights}</p>
                 </div>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" onClick={() => handleViewDetails(site.name)}>
                   View Details
                 </Button>
               </CardContent>
@@ -116,7 +139,7 @@ const DiveSites = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="hero" size="lg" className="text-lg">
+          <Button variant="hero" size="lg" className="text-lg" onClick={handleExploreAll}>
             Explore All Dive Sites
           </Button>
         </div>

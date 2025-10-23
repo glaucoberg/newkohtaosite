@@ -1,8 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/hero-koh-tao.jpg";
 
 const Hero = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const { toast } = useToast();
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      toast({
+        title: "Searching...",
+        description: `Looking for: ${searchQuery}`,
+      });
+    }
+  };
+
+  const handlePlanTrip = () => {
+    toast({
+      title: "Plan Your Trip",
+      description: "Trip planning feature coming soon!",
+    });
+  };
+
+  const scrollToDiveSites = () => {
+    document.getElementById('dive-sites')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -29,8 +54,11 @@ const Hero = () => {
               type="text" 
               placeholder="Search dive sites, beaches, activities..." 
               className="flex-1 px-6 py-3 rounded-full bg-transparent focus:outline-none text-foreground"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
             />
-            <Button variant="hero" size="lg" className="rounded-full">
+            <Button variant="hero" size="lg" className="rounded-full" onClick={handleSearch}>
               <Search className="mr-2 h-5 w-5" />
               Explore
             </Button>
@@ -39,10 +67,10 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-4 justify-center">
-          <Button variant="hero" size="lg" className="text-lg px-8">
+          <Button variant="hero" size="lg" className="text-lg px-8" onClick={handlePlanTrip}>
             Plan Your Trip
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary">
+          <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-primary" onClick={scrollToDiveSites}>
             View Dive Sites
           </Button>
         </div>

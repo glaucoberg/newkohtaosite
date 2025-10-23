@@ -1,10 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Sunset, Palmtree } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import beachImage from "@/assets/beach-paradise.jpg";
 import sunsetImage from "@/assets/sunset-viewpoint.jpg";
 
 const Destinations = () => {
+  const { toast } = useToast();
+
+  const handleGetDirections = (destinationName: string) => {
+    toast({
+      title: "Getting Directions",
+      description: `Opening map to ${destinationName}...`,
+    });
+  };
+
+  const handleOpenMap = () => {
+    toast({
+      title: "Interactive Map",
+      description: "Loading interactive map of Koh Tao...",
+    });
+  };
   const destinations = [
     {
       name: "Sairee Beach",
@@ -92,7 +108,7 @@ const Destinations = () => {
                       </span>
                     ))}
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent">
+                  <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent" onClick={() => handleGetDirections(destination.name)}>
                     Get Directions
                   </Button>
                 </CardContent>
@@ -108,7 +124,7 @@ const Destinations = () => {
           <p className="text-lg mb-6 text-white/90 max-w-2xl mx-auto">
             Navigate Koh Tao with our comprehensive map featuring all dive sites, beaches, restaurants, and activities
           </p>
-          <Button variant="secondary" size="lg" className="text-lg">
+          <Button variant="secondary" size="lg" className="text-lg" onClick={handleOpenMap}>
             Open Interactive Map
           </Button>
         </div>

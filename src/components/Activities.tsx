@@ -1,8 +1,24 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Ship, Bike, UtensilsCrossed, Calendar, GraduationCap, PartyPopper } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Activities = () => {
+  const { toast } = useToast();
+
+  const handleBookActivity = (activityName: string) => {
+    toast({
+      title: "Booking Activity",
+      description: `Preparing to book: ${activityName}`,
+    });
+  };
+
+  const handleViewDeals = () => {
+    toast({
+      title: "Special Deals",
+      description: "Loading exclusive offers and discounts...",
+    });
+  };
   const activities = [
     {
       icon: GraduationCap,
@@ -95,7 +111,7 @@ const Activities = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="default" className="w-full">
+                  <Button variant="default" className="w-full" onClick={() => handleBookActivity(activity.title)}>
                     Book Now
                   </Button>
                 </CardContent>
@@ -110,7 +126,7 @@ const Activities = () => {
           <p className="text-lg mb-6 text-white/90">
             Book your diving course or activity 7 days in advance and get 15% off
           </p>
-          <Button variant="secondary" size="lg">
+          <Button variant="secondary" size="lg" onClick={handleViewDeals}>
             View All Deals
           </Button>
         </div>
