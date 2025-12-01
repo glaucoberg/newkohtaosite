@@ -1,0 +1,58 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="98" fill="#f5f5dc" stroke="#2d5016" stroke-width="2"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#2d5016" stroke-width="3"/>
+  
+  <!-- Top Text: DISCOVERY -->
+  <text x="100" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d5016" text-anchor="middle">DISCOVERY</text>
+  
+  <!-- Bottom Text: KOH TAO -->
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d5016" text-anchor="middle">KOH TAO</text>
+  
+  <!-- Sun at top center -->
+  <circle cx="100" cy="50" r="8" fill="#ffd700"/>
+  <line x1="100" y1="42" x2="100" y2="38" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="100" y1="58" x2="100" y2="62" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="92" y1="50" x2="88" y2="50" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="108" y1="50" x2="112" y2="50" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="94" y1="44" x2="91" y2="41" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="106" y1="44" x2="109" y2="41" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="94" y1="56" x2="91" y2="59" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="106" y1="56" x2="109" y2="59" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Left Palm Tree -->
+  <path d="M 50 120 Q 55 100, 60 120 Q 55 110, 50 120" fill="#cd853f" stroke="#8b4513" stroke-width="1"/>
+  <path d="M 55 100 L 50 85 L 60 90 Z" fill="#228b22" stroke="#2d5016" stroke-width="1"/>
+  <path d="M 55 100 L 45 90 L 55 95 Z" fill="#228b22" stroke="#2d5016" stroke-width="1"/>
+  <path d="M 55 100 L 65 90 L 55 95 Z" fill="#228b22" stroke="#2d5016" stroke-width="1"/>
+  
+  <!-- Right Palm Tree -->
+  <path d="M 150 120 Q 145 100, 140 120 Q 145 110, 150 120" fill="#cd853f" stroke="#8b4513" stroke-width="1"/>
+  <path d="M 145 100 L 140 85 L 150 90 Z" fill="#228b22" stroke="#2d5016" stroke-width="1"/>
+  <path d="M 145 100 L 135 90 L 145 95 Z" fill="#228b22" stroke="#2d5016" stroke-width="1"/>
+  <path d="M 145 100 L 155 90 L 145 95 Z" fill="#228b22" stroke="#2d5016" stroke-width="1"/>
+  
+  <!-- Sea Turtle -->
+  <!-- Turtle shell (coral orange with hex pattern) -->
+  <ellipse cx="100" cy="120" rx="25" ry="20" fill="#ff7f50" stroke="#2d5016" stroke-width="1.5"/>
+  <path d="M 85 120 L 115 120 M 100 110 L 100 130 M 90 115 L 110 115 M 90 125 L 110 125" stroke="#2d5016" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Turtle head -->
+  <ellipse cx="100" cy="105" rx="8" ry="6" fill="#40e0d0" stroke="#2d5016" stroke-width="1"/>
+  <circle cx="98" cy="104" r="1" fill="#2d5016"/>
+  <circle cx="102" cy="104" r="1" fill="#2d5016"/>
+  
+  <!-- Turtle flippers -->
+  <ellipse cx="80" cy="120" rx="6" ry="10" fill="#40e0d0" stroke="#2d5016" stroke-width="1"/>
+  <ellipse cx="120" cy="120" rx="6" ry="10" fill="#40e0d0" stroke="#2d5016" stroke-width="1"/>
+  <ellipse cx="85" cy="135" rx="8" ry="5" fill="#40e0d0" stroke="#2d5016" stroke-width="1"/>
+  <ellipse cx="115" cy="135" rx="8" ry="5" fill="#40e0d0" stroke="#2d5016" stroke-width="1"/>
+  
+  <!-- Turtle tail -->
+  <path d="M 100 140 Q 95 145, 100 150" fill="#40e0d0" stroke="#2d5016" stroke-width="1"/>
+  
+  <!-- Waves at bottom -->
+  <path d="M 70 160 Q 85 155, 100 160 T 130 160" fill="none" stroke="#40e0d0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 75 165 Q 90 160, 105 165 T 135 165" fill="none" stroke="#2d5016" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+</svg>
+

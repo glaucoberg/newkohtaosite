@@ -1,0 +1,91 @@
+[
+  {
+    "id": "sairee-beach-restaurant",
+    "nameKey": "businesses.saireeBeachRestaurant.name",
+    "descriptionKey": "businesses.saireeBeachRestaurant.description",
+    "category": "restaurant",
+    "rating": 4.5,
+    "openHours": "11:00 AM - 10:00 PM",
+    "phone": "+66 77 456 7890",
+    "location": "businesses.location.saireeBeach",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "dive-shop-pro",
+    "nameKey": "businesses.diveShopPro.name",
+    "descriptionKey": "businesses.diveShopPro.description",
+    "category": "diveShop",
+    "rating": 4.8,
+    "openHours": "7:00 AM - 6:00 PM",
+    "phone": "+66 77 456 7891",
+    "location": "businesses.location.maeHaad",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "island-market",
+    "nameKey": "businesses.islandMarket.name",
+    "descriptionKey": "businesses.islandMarket.description",
+    "category": "shopping",
+    "rating": 4.2,
+    "openHours": "9:00 AM - 8:00 PM",
+    "phone": "+66 77 456 7892",
+    "location": "businesses.location.chalokBaanKao",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "sunset-cafe",
+    "nameKey": "businesses.sunsetCafe.name",
+    "descriptionKey": "businesses.sunsetCafe.description",
+    "category": "cafe",
+    "rating": 4.6,
+    "openHours": "7:00 AM - 9:00 PM",
+    "phone": "+66 77 456 7893",
+    "location": "businesses.location.saireeBeach",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "thai-massage-spa",
+    "nameKey": "businesses.thaiMassageSpa.name",
+    "descriptionKey": "businesses.thaiMassageSpa.description",
+    "category": "spa",
+    "rating": 4.7,
+    "openHours": "10:00 AM - 10:00 PM",
+    "phone": "+66 77 456 7894",
+    "location": "businesses.location.maeHaad",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "beach-bar-grill",
+    "nameKey": "businesses.beachBarGrill.name",
+    "descriptionKey": "businesses.beachBarGrill.description",
+    "category": "restaurant",
+    "rating": 4.4,
+    "openHours": "12:00 PM - 11:00 PM",
+    "phone": "+66 77 456 7895",
+    "location": "businesses.location.chalokBaanKao",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "dive-gear-store",
+    "nameKey": "businesses.diveGearStore.name",
+    "descriptionKey": "businesses.diveGearStore.description",
+    "category": "shopping",
+    "rating": 4.5,
+    "openHours": "8:00 AM - 7:00 PM",
+    "phone": "+66 77 456 7896",
+    "location": "businesses.location.saireeBeach",
+    "image": "/assets/beach-paradise.jpg"
+  },
+  {
+    "id": "organic-juice-bar",
+    "nameKey": "businesses.organicJuiceBar.name",
+    "descriptionKey": "businesses.organicJuiceBar.description",
+    "category": "cafe",
+    "rating": 4.3,
+    "openHours": "8:00 AM - 6:00 PM",
+    "phone": "+66 77 456 7897",
+    "location": "businesses.location.maeHaad",
+    "image": "/assets/beach-paradise.jpg"
+  }
+]
+

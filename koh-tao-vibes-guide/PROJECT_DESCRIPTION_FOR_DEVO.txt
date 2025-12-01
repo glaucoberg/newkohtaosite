@@ -1,0 +1,219 @@
+PROJECT DESCRIPTION FOR DEVO.DEV - KOH TAO GUIDE
+
+PROJECT OVERVIEW:
+Create a comprehensive travel guide website for Koh Tao, Thailand - a tropical diving paradise. This is a modern, luxury-themed single-page application that serves as the ultimate travel companion for visitors to explore dive sites, beaches, destinations, activities, accommodations, and local businesses.
+
+TECHNOLOGY STACK:
+- React 18.3.1 with TypeScript
+- Vite as build tool
+- React Router DOM for routing
+- Tailwind CSS for styling
+- shadcn/ui component library
+- TanStack React Query for data management
+- Lucide React for icons
+- Context API for state management (Language switching)
+
+DESIGN SYSTEM - LUXURY DARK THEME:
+The entire website uses a sophisticated dark luxury theme with the following color palette:
+- Background: Deep dark navy (HSL: 220 20% 8%)
+- Foreground: Light cream/white (HSL: 180 30% 98%)
+- Primary: Deep ocean teal (HSL: 180 70% 45%)
+- Secondary: Rich gold/amber (HSL: 45 85% 55%)
+- Accent: Coral/pink (HSL: 15 75% 60%)
+- Cards: Dark navy (HSL: 220 25% 12%)
+- Borders: Subtle dark borders (HSL: 220 25% 20%)
+
+All gradients use teal-to-gold combinations. The design features:
+- Smooth animations and transitions
+- Backdrop blur effects
+- Luxury shadows and glows
+- Rounded corners (0.75rem radius)
+- Premium glassmorphism effects
+
+PAGE STRUCTURE (Single Page Application):
+
+1. NAVIGATION BAR (Fixed Header):
+   - Logo: "KT" in a gradient circle (teal to gold) + "Koh Tao Guide" text
+   - Navigation links: Dive Sites, Destinations, Activities, Accommodations, Business Directory
+   - "Plan Your Trip" button (gradient teal-to-gold)
+   - Language selector dropdown (English, Spanish, Thai)
+   - Transparent when at top, becomes solid with backdrop blur on scroll
+   - Mobile responsive hamburger menu
+
+2. HERO SECTION (Full Screen):
+   - Background: Aerial view of Koh Tao island (hero-koh-tao.jpg) with dark gradient overlay
+   - Large title: "Discover Koh Tao" with gradient text (teal to gold)
+   - Subtitle: "Your ultimate guide to Thailand's tropical diving paradise..."
+   - Search bar: Dark rounded input with "Explore" button
+   - Two CTA buttons: "Plan Your Trip" and "View Dive Sites"
+   - Statistics cards (4 cards): 30+ Dive Sites, 15+ Beaches, 50+ Restaurants, 365 Days of Sun
+   - Scroll indicator at bottom
+
+3. DIVE SITES SECTION:
+   - Title: "World-Class Dive Sites" with Waves icon
+   - Featured dive site hero card: Chumphon Pinnacle (large image card with description)
+   - Grid of 4 dive site cards:
+     * Chumphon Pinnacle (Advanced, 14-36m depth)
+     * Sail Rock (Advanced, 15-40m depth)
+     * Japanese Gardens (Beginner, 8-14m depth)
+     * Shark Island (Intermediate, 10-25m depth)
+   - Each card shows: Name, difficulty badge (color-coded), depth, description, marine life highlights
+   - "View Details" button on each card
+   - "Explore All Dive Sites" CTA button at bottom
+
+4. DESTINATIONS SECTION:
+   - Title: "Must-Visit Destinations" with MapPin icon
+   - Grid of 2 large destination cards:
+     * Sairee Beach (Beach type, with Palmtree icon)
+     * John-Suwan Viewpoint (Viewpoint type, with Sunset icon)
+     * Shark Bay (Beach type)
+     * Mango Viewpoint (Viewpoint type)
+   - Each card: Large image, type badge, name, description, activity tags, "Get Directions" button
+   - Interactive map CTA section at bottom with "Open Interactive Map" button
+
+5. ACTIVITIES SECTION:
+   - Title: "Activities & Experiences" with Sparkles icon
+   - Grid of 6 activity cards:
+     * Diving Courses (From $350) - GraduationCap icon, teal gradient
+     * Boat Tours (From $45) - Ship icon, gold gradient
+     * Bike Rentals (From $8/day) - Bike icon, coral gradient
+     * Food Tours (From $30) - UtensilsCrossed icon, teal-to-gold gradient
+     * Events & Parties (Various) - PartyPopper icon, gold-to-coral gradient
+     * Activity Calendar (Free to Browse) - Calendar icon, teal-to-coral gradient
+   - Each card: Icon, title, description, price, feature list, "Book Now" button
+   - Special deals section at bottom: "Early Bird Special" with discount offer
+
+6. ACCOMMODATIONS SECTION:
+   - Title: "Accommodations" with Hotel icon
+   - Featured accommodation hero: Ocean View Resort (large image card, 4.7 rating, $120/night)
+   - Grid of 4 accommodation cards:
+     * Tao Beach Resort (Resort, 4.5 rating, $50-80/night, Sairee Beach)
+     * Dive Inn Bungalows (Bungalow, 4.2 rating, $25-45/night, Chalok Baan Kao)
+     * Luxury Beach Villa (Villa, 4.8 rating, $150-250/night, Mae Haad)
+     * Backpacker Hostel (Hostel, 4.0 rating, $10-20/night, Sairee Beach)
+   - Each card: Type badge, name, location, rating, price, description, amenities tags, "View Details" button
+   - "Explore All Accommodations" CTA button
+
+7. BUSINESS DIRECTORY SECTION:
+   - Title: "Business Directory" with Building2 icon
+   - Category filter buttons: All, Restaurants, Dive Shops, Shopping, Cafés
+   - Grid of 8 business cards:
+     * Sairee Beach Restaurant (Restaurant, 4.5 rating, 11:00 AM - 10:00 PM)
+     * Dive Shop Pro (Dive Shop, 4.8 rating, 7:00 AM - 6:00 PM)
+     * Island Market (Shopping, 4.2 rating, 9:00 AM - 8:00 PM)
+     * Sunset Café (Café, 4.6 rating, 7:00 AM - 9:00 PM)
+     * Thai Massage Spa (Spa, 4.7 rating, 10:00 AM - 10:00 PM)
+     * Beach Bar & Grill (Restaurant, 4.4 rating, 12:00 PM - 11:00 PM)
+     * Dive Gear Store (Shopping, 4.5 rating, 8:00 AM - 7:00 PM)
+     * Organic Juice Bar (Café, 4.3 rating, 8:00 AM - 6:00 PM)
+   - Each card: Category badge (color-coded), name, location, rating, hours, phone, description, "Details" and "Contact" buttons
+   - "View All Businesses" CTA button
+
+8. NEWSLETTER SECTION:
+   - Centered card with gradient background
+   - Mail icon in gradient circle
+   - Title: "Stay Updated"
+   - Description: "Get the latest news, exclusive deals, and travel tips..."
+   - Email input field with "Subscribe" button
+   - Subscriber count text: "Join over 5,000 travelers..."
+
+9. FOOTER:
+   - 5-column grid layout
+   - Brand section: Logo, description, social media icons (Facebook, Instagram, Twitter)
+   - 4 link columns: Explore, Activities, Plan, About
+   - Contact info: Address (Koh Tao, Surat Thani, Thailand), Email, Phone
+   - Copyright text and "Back to Top" button
+
+COMPONENT FEATURES:
+
+INTERACTIVITY:
+- Smooth scroll navigation to sections
+- Toast notifications for user actions (booking, searching, etc.)
+- Language switching (English, Spanish, Thai) with localStorage persistence
+- Search functionality in hero section
+- Hover effects on all cards (scale, shadow, border color changes)
+- Mobile-responsive design with hamburger menu
+- All buttons have gradient backgrounds and hover effects
+
+DATA STRUCTURE:
+The website uses JSON data files for:
+- destinations.json: Beach and viewpoint locations with images, descriptions, activities
+- activities.json: Activity listings with prices, features, icons
+- accommodations.json: Hotel/resort listings with ratings, prices, amenities, locations
+- businesses.json: Business directory with categories, ratings, hours, contact info
+
+LANGUAGE SUPPORT:
+Full internationalization with 4 languages:
+- English (default)
+- Spanish (Español)
+- Thai (ไทย)
+- German (Deutsch)
+
+All text content is translatable including:
+- Navigation items
+- Section titles and descriptions
+- Button labels
+- Toast messages
+- Data content (destinations, activities, accommodations, businesses)
+
+UI COMPONENTS USED:
+- Cards (with header, content, description)
+- Buttons (gradient, outline variants)
+- Badges (for categories, difficulty levels, types)
+- Input fields (for search and newsletter)
+- Toast notifications
+- Icons from Lucide React
+
+ANIMATIONS & EFFECTS:
+- Fade-in animations on hero text
+- Smooth scroll behavior
+- Hover scale transforms on cards
+- Gradient text effects
+- Backdrop blur on navigation
+- Glow effects on buttons
+- Bounce animation on scroll indicator
+- Smooth transitions (300-700ms duration)
+
+RESPONSIVE DESIGN:
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px)
+- Grid layouts adapt: 1 column (mobile) → 2 columns (tablet) → 4 columns (desktop)
+- Mobile hamburger menu
+- Stacked layouts on small screens
+
+IMAGES REQUIRED:
+- hero-koh-tao.jpg (aerial island view)
+- diving-scene.jpg (underwater diving)
+- beach-paradise.jpg (tropical beach)
+- sunset-viewpoint.jpg (sunset from viewpoint)
+
+COLOR SCHEME SUMMARY:
+- Primary gradient: Teal (180 70% 45%) to Gold (45 85% 55%)
+- Background: Dark navy (220 20% 8%)
+- Cards: Dark navy (220 25% 12%)
+- Text: Light cream (180 30% 98%)
+- Accents: Coral (15 75% 60%)
+
+TYPography:
+- Font: Inter, SF Pro Display, system fonts
+- Letter spacing: -0.01em
+- Large headings: 5xl-8xl (responsive)
+- Body text: base-lg
+- Uppercase navigation links with tracking
+
+SPECIAL FEATURES:
+- Dark theme only (no light mode)
+- Smooth scrolling between sections
+- Toast notifications for all user interactions
+- Language persistence in localStorage
+- Search placeholder functionality
+- Category filtering (business directory)
+- Rating displays with star icons
+- Price ranges and pricing information
+- Opening hours display
+- Contact information (phone, email)
+- Social media links
+- Newsletter subscription form
+
+This is a complete, production-ready travel guide website with luxury design, full internationalization, and comprehensive content about Koh Tao island. All components are interactive, responsive, and follow the dark luxury theme consistently throughout.
+

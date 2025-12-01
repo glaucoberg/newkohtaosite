@@ -1,0 +1,88 @@
+[
+  {
+    "id": "ocean-view-resort",
+    "nameKey": "accommodations.oceanView.name",
+    "descriptionKey": "accommodations.oceanView.description",
+    "type": "resort",
+    "rating": 4.7,
+    "price": "From $120/night",
+    "location": "accommodations.location.saireeBeach",
+    "image": "/assets/beach-paradise.jpg",
+    "amenities": [
+      "accommodations.amenity.pool",
+      "accommodations.amenity.restaurant",
+      "accommodations.amenity.wifi",
+      "accommodations.amenity.ac",
+      "accommodations.amenity.privateBeach"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tao-beach-resort",
+    "nameKey": "accommodations.taoBeach.name",
+    "descriptionKey": "accommodations.taoBeach.description",
+    "type": "resort",
+    "rating": 4.5,
+    "price": "$50-80",
+    "location": "accommodations.location.saireeBeach",
+    "image": "/assets/beach-paradise.jpg",
+    "amenities": [
+      "accommodations.amenity.pool",
+      "accommodations.amenity.restaurant",
+      "accommodations.amenity.wifi",
+      "accommodations.amenity.ac"
+    ],
+    "featured": false
+  },
+  {
+    "id": "dive-inn-bungalows",
+    "nameKey": "accommodations.diveInn.name",
+    "descriptionKey": "accommodations.diveInn.description",
+    "type": "bungalow",
+    "rating": 4.2,
+    "price": "$25-45",
+    "location": "accommodations.location.chalokBaanKao",
+    "image": "/assets/beach-paradise.jpg",
+    "amenities": [
+      "accommodations.amenity.wifi",
+      "accommodations.amenity.fan",
+      "accommodations.amenity.sharedBathroom"
+    ],
+    "featured": false
+  },
+  {
+    "id": "luxury-beach-villa",
+    "nameKey": "accommodations.luxuryVilla.name",
+    "descriptionKey": "accommodations.luxuryVilla.description",
+    "type": "villa",
+    "rating": 4.8,
+    "price": "$150-250",
+    "location": "accommodations.location.maeHaad",
+    "image": "/assets/beach-paradise.jpg",
+    "amenities": [
+      "accommodations.amenity.privateBeach",
+      "accommodations.amenity.pool",
+      "accommodations.amenity.kitchen",
+      "accommodations.amenity.ac",
+      "accommodations.amenity.wifi"
+    ],
+    "featured": false
+  },
+  {
+    "id": "backpacker-hostel",
+    "nameKey": "accommodations.backpackerHostel.name",
+    "descriptionKey": "accommodations.backpackerHostel.description",
+    "type": "hostel",
+    "rating": 4.0,
+    "price": "$10-20",
+    "location": "accommodations.location.saireeBeach",
+    "image": "/assets/beach-paradise.jpg",
+    "amenities": [
+      "accommodations.amenity.sharedKitchen",
+      "accommodations.amenity.wifi",
+      "accommodations.amenity.commonArea"
+    ],
+    "featured": false
+  }
+]
+

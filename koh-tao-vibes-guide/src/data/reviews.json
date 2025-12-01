@@ -1,0 +1,83 @@
+[
+  {
+    "id": "review-1",
+    "entityType": "accommodation",
+    "entityId": "ocean-view-resort",
+    "userName": "Sarah M.",
+    "rating": 5,
+    "comment": "Absolutely stunning resort with breathtaking ocean views. The staff was incredibly friendly and the amenities were top-notch. Perfect for a romantic getaway!",
+    "date": "2024-11-15",
+    "verified": true
+  },
+  {
+    "id": "review-2",
+    "entityType": "accommodation",
+    "entityId": "ocean-view-resort",
+    "userName": "James K.",
+    "rating": 4,
+    "comment": "Great location and beautiful rooms. The pool area is fantastic. Only minor issue was the WiFi speed, but overall excellent stay.",
+    "date": "2024-11-10",
+    "verified": true
+  },
+  {
+    "id": "review-3",
+    "entityType": "accommodation",
+    "entityId": "tao-beach-resort",
+    "userName": "Emma L.",
+    "rating": 4,
+    "comment": "Lovely beachfront location with easy access to dive shops. Rooms are clean and comfortable. Great value for money!",
+    "date": "2024-11-08",
+    "verified": true
+  },
+  {
+    "id": "review-4",
+    "entityType": "accommodation",
+    "entityId": "dive-inn-bungalows",
+    "userName": "Mike R.",
+    "rating": 5,
+    "comment": "Perfect for divers! Close to all the dive sites and very affordable. The bungalows are basic but clean and comfortable.",
+    "date": "2024-11-05",
+    "verified": true
+  },
+  {
+    "id": "review-5",
+    "entityType": "business",
+    "entityId": "sairee-beach-restaurant",
+    "userName": "Lisa T.",
+    "rating": 5,
+    "comment": "Amazing seafood and Thai cuisine! The ocean view while dining is incredible. Service was excellent and prices are reasonable.",
+    "date": "2024-11-12",
+    "verified": true
+  },
+  {
+    "id": "review-6",
+    "entityType": "business",
+    "entityId": "dive-shop-pro",
+    "userName": "Tom H.",
+    "rating": 5,
+    "comment": "Professional dive center with excellent instructors. Equipment is well-maintained and the staff is very knowledgeable. Highly recommend!",
+    "date": "2024-11-14",
+    "verified": true
+  },
+  {
+    "id": "review-7",
+    "entityType": "business",
+    "entityId": "sunset-cafe",
+    "userName": "Anna B.",
+    "rating": 4,
+    "comment": "Cozy café with great coffee and smoothies. Perfect spot for breakfast or a light lunch. The atmosphere is very relaxing.",
+    "date": "2024-11-11",
+    "verified": true
+  },
+  {
+    "id": "review-8",
+    "entityType": "accommodation",
+    "entityId": "luxury-beach-villa",
+    "userName": "David C.",
+    "rating": 5,
+    "comment": "Luxury at its finest! Private beach access, stunning villa, and impeccable service. Worth every penny for a special occasion.",
+    "date": "2024-11-09",
+    "verified": true
+  }
+]
+

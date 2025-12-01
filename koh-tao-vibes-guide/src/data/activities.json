@@ -1,0 +1,75 @@
+[
+  {
+    "id": "diving-courses",
+    "titleKey": "activities.divingCourses.title",
+    "descriptionKey": "activities.divingCourses.description",
+    "price": "From $350",
+    "features": [
+      "activities.divingCourses.feature.padi",
+      "activities.divingCourses.feature.deposit",
+      "activities.divingCourses.feature.instructors"
+    ],
+    "color": "from-[hsl(180_70%_45%)] to-[hsl(180_65%_40%)]"
+  },
+  {
+    "id": "boat-tours",
+    "titleKey": "activities.boatTours.title",
+    "descriptionKey": "activities.boatTours.description",
+    "price": "From $45",
+    "features": [
+      "activities.boatTours.feature.fullDay",
+      "activities.boatTours.feature.snorkelGear",
+      "activities.boatTours.feature.lunch"
+    ],
+    "color": "from-[hsl(45_85%_55%)] to-[hsl(45_80%_50%)]"
+  },
+  {
+    "id": "bike-rentals",
+    "titleKey": "activities.bikeRentals.title",
+    "descriptionKey": "activities.bikeRentals.description",
+    "price": "From $8/day",
+    "features": [
+      "activities.bikeRentals.feature.vehicles",
+      "activities.bikeRentals.feature.rates",
+      "activities.bikeRentals.feature.helmet"
+    ],
+    "color": "from-[hsl(15_75%_60%)] to-[hsl(15_70%_55%)]"
+  },
+  {
+    "id": "food-tours",
+    "titleKey": "activities.foodTours.title",
+    "descriptionKey": "activities.foodTours.description",
+    "price": "From $30",
+    "features": [
+      "activities.foodTours.feature.restaurants",
+      "activities.foodTours.feature.streetFood",
+      "activities.foodTours.feature.cookingClasses"
+    ],
+    "color": "from-[hsl(180_70%_45%)] to-[hsl(45_85%_55%)]"
+  },
+  {
+    "id": "events-parties",
+    "titleKey": "activities.eventsParties.title",
+    "descriptionKey": "activities.eventsParties.description",
+    "price": "Various",
+    "features": [
+      "activities.eventsParties.feature.fullMoon",
+      "activities.eventsParties.feature.liveMusic",
+      "activities.eventsParties.feature.fireShows"
+    ],
+    "color": "from-[hsl(45_85%_55%)] to-[hsl(15_75%_60%)]"
+  },
+  {
+    "id": "activity-calendar",
+    "titleKey": "activities.activityCalendar.title",
+    "descriptionKey": "activities.activityCalendar.description",
+    "price": "Free to Browse",
+    "features": [
+      "activities.activityCalendar.feature.events",
+      "activities.activityCalendar.feature.book",
+      "activities.activityCalendar.feature.deals"
+    ],
+    "color": "from-[hsl(180_70%_45%)] to-[hsl(15_75%_60%)]"
+  }
+]
+

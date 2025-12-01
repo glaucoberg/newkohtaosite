@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sairee-beach",
+    "nameKey": "destinations.saireeBeach.name",
+    "typeKey": "destinations.type.beach",
+    "descriptionKey": "destinations.saireeBeach.description",
+    "image": "/assets/beach-paradise.jpg",
+    "lat": 10.0956,
+    "lng": 99.8404,
+    "activities": [
+      "destinations.activity.swimming",
+      "destinations.activity.snorkeling",
+      "destinations.activity.beachBars"
+    ]
+  },
+  {
+    "id": "john-suwan-viewpoint",
+    "nameKey": "destinations.johnSuwan.name",
+    "typeKey": "destinations.type.viewpoint",
+    "descriptionKey": "destinations.johnSuwan.description",
+    "image": "/assets/sunset-viewpoint.jpg",
+    "lat": 10.1100,
+    "lng": 99.8300,
+    "activities": [
+      "destinations.activity.photography",
+      "destinations.activity.sunsetWatching",
+      "destinations.activity.hiking"
+    ]
+  },
+  {
+    "id": "shark-bay",
+    "nameKey": "destinations.sharkBay.name",
+    "typeKey": "destinations.type.beach",
+    "descriptionKey": "destinations.sharkBay.description",
+    "image": "/assets/beach-paradise.jpg",
+    "lat": 10.0800,
+    "lng": 99.8500,
+    "activities": [
+      "destinations.activity.snorkeling",
+      "destinations.activity.swimming",
+      "destinations.activity.wildlifeWatching"
+    ]
+  },
+  {
+    "id": "mango-viewpoint",
+    "nameKey": "destinations.mangoViewpoint.name",
+    "typeKey": "destinations.type.viewpoint",
+    "descriptionKey": "destinations.mangoViewpoint.description",
+    "image": "/assets/sunset-viewpoint.jpg",
+    "lat": 10.1000,
+    "lng": 99.8350,
+    "activities": [
+      "destinations.activity.relaxation",
+      "destinations.activity.photography",
+      "destinations.activity.sunriseViews"
+    ]
+  }
+]
+
