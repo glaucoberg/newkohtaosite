@@ -1,11 +1,40 @@
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone, ArrowUp } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Map footer link keys to routes
+  const getLinkPath = (linkKey: string): string => {
+    const linkMap: { [key: string]: string } = {
+      "footer.link.diveSites": "/diving",
+      "footer.link.beaches": "/destinations",
+      "footer.link.viewpoints": "/destinations",
+      "footer.link.restaurants": "/businesses",
+      "footer.link.nightlife": "/businesses",
+      "footer.link.divingCourses": "/activities",
+      "footer.link.boatTours": "/activities",
+      "footer.link.snorkeling": "/activities",
+      "footer.link.bikeRentals": "/activities",
+      "footer.link.islandHopping": "/activities",
+      "footer.link.accommodations": "/accommodations",
+      "footer.link.gettingThere": "/map",
+      "footer.link.bestTimeToVisit": "/",
+      "footer.link.travelTips": "/",
+      "footer.link.weather": "/",
+      "footer.link.aboutUs": "/about",
+      "footer.link.contact": "/contact",
+      "footer.link.businessListings": "/businesses",
+      "footer.link.advertise": "/contact",
+      "footer.link.termsPrivacy": "/contact",
+    };
+    return linkMap[linkKey] || "/";
   };
 
   const footerSections = [
@@ -51,12 +80,6 @@ const Footer = () => {
     },
   ];
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
-    e.preventDefault();
-    // In real app, would navigate or scroll to section
-    console.log(`Navigate to: ${link}`);
-  };
-
   return (
     <footer className="bg-[hsl(220_20%_8%)] border-t border-[hsl(220_25%_20%)] relative overflow-hidden">
       {/* Background Pattern */}
@@ -69,14 +92,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+            <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[hsl(180_70%_45%)] to-[hsl(45_85%_55%)] flex items-center justify-center shadow-[0_0_20px_hsl(180_70%_45%_/_0.3)]">
                 <span className="text-white font-bold text-xl">KT</span>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-[hsl(180_70%_45%)] to-[hsl(45_85%_55%)] bg-clip-text text-transparent">
                 Koh Tao Guide
               </span>
-            </div>
+            </Link>
             <p className="text-[hsl(180_30%_98%_/_0.7)] mb-6 leading-relaxed">
               {t("footer.description")}
             </p>
@@ -112,13 +135,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a 
-                      href="#" 
+                    <Link 
+                      to={getLinkPath(link.key)}
                       className="text-[hsl(180_30%_98%_/_0.6)] hover:text-[hsl(180_70%_45%)] transition-colors text-sm"
-                      onClick={(e) => handleLinkClick(e, t(link.key))}
                     >
                       {t(link.key)}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

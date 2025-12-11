@@ -54,6 +54,76 @@
       "destinations.activity.photography",
       "destinations.activity.sunriseViews"
     ]
+  },
+  {
+    "id": "nang-yuan-island",
+    "nameKey": "destinations.nangYuanIsland.name",
+    "typeKey": "destinations.type.beach",
+    "descriptionKey": "destinations.nangYuanIsland.description",
+    "image": "/assets/beach-paradise.jpg",
+    "lat": 10.0850,
+    "lng": 99.8200,
+    "activities": [
+      "destinations.activity.snorkeling",
+      "destinations.activity.swimming",
+      "destinations.activity.islandHopping"
+    ]
+  },
+  {
+    "id": "tanote-bay",
+    "nameKey": "destinations.tanoteBay.name",
+    "typeKey": "destinations.type.beach",
+    "descriptionKey": "destinations.tanoteBay.description",
+    "image": "/assets/beach-paradise.jpg",
+    "lat": 10.0900,
+    "lng": 99.8600,
+    "activities": [
+      "destinations.activity.snorkeling",
+      "destinations.activity.diving",
+      "destinations.activity.swimming"
+    ]
+  },
+  {
+    "id": "sai-nuan-beach",
+    "nameKey": "destinations.saiNuanBeach.name",
+    "typeKey": "destinations.type.beach",
+    "descriptionKey": "destinations.saiNuanBeach.description",
+    "image": "/assets/beach-paradise.jpg",
+    "lat": 10.0750,
+    "lng": 99.8450,
+    "activities": [
+      "destinations.activity.swimming",
+      "destinations.activity.snorkeling",
+      "destinations.activity.relaxation"
+    ]
+  },
+  {
+    "id": "aow-leuk-beach",
+    "nameKey": "destinations.aowLeukBeach.name",
+    "typeKey": "destinations.type.beach",
+    "descriptionKey": "destinations.aowLeukBeach.description",
+    "image": "/assets/beach-paradise.jpg",
+    "lat": 10.1050,
+    "lng": 99.8550,
+    "activities": [
+      "destinations.activity.snorkeling",
+      "destinations.activity.swimming",
+      "destinations.activity.wildlifeWatching"
+    ]
+  },
+  {
+    "id": "wat-koh-tao",
+    "nameKey": "destinations.watKohTao.name",
+    "typeKey": "destinations.type.temple",
+    "descriptionKey": "destinations.watKohTao.description",
+    "image": "/assets/wat-koh-tao.jpg",
+    "lat": 10.086889,
+    "lng": 99.827383,
+    "activities": [
+      "destinations.activity.culturalExploration",
+      "destinations.activity.photography",
+      "destinations.activity.meditation"
+    ]
   }
 ]
 

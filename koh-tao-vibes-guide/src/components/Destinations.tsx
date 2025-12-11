@@ -1,17 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Sunset, Palmtree, Navigation2 } from "lucide-react";
+import { MapPin, Sunset, Palmtree, Navigation2, Landmark } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import destinationsData from "@/data/destinations.json";
 import beachParadiseImage from "@/assets/beach-paradise.jpg";
 import sunsetViewpointImage from "@/assets/sunset-viewpoint.jpg";
-
-// Icon mapping - add more icons here as needed
-const iconMap: { [key: string]: typeof Palmtree } = {
-  beach: Palmtree,
-  viewpoint: Sunset,
-};
+import watKohTaoImage from "@/assets/wat-koh-tao.jpg";
 
 const Destinations = () => {
   const { toast } = useToast();
@@ -24,17 +19,11 @@ const Destinations = () => {
     });
   };
 
-  const handleOpenMap = () => {
-    toast({
-      title: t("toast.interactiveMap"),
-      description: t("toast.loadingMap"),
-    });
-  };
-
   // Get icon based on type
   const getIcon = (typeKey: string) => {
     if (typeKey === "destinations.type.beach") return Palmtree;
     if (typeKey === "destinations.type.viewpoint") return Sunset;
+    if (typeKey === "destinations.type.temple") return Landmark;
     return Palmtree; // default
   };
 
@@ -42,8 +31,10 @@ const Destinations = () => {
   const imageMap: { [key: string]: string } = {
     "/assets/beach-paradise.jpg": beachParadiseImage,
     "/assets/sunset-viewpoint.jpg": sunsetViewpointImage,
+    "/assets/wat-koh-tao.jpg": watKohTaoImage,
     "beach-paradise.jpg": beachParadiseImage,
     "sunset-viewpoint.jpg": sunsetViewpointImage,
+    "wat-koh-tao.jpg": watKohTaoImage,
   };
 
   const getImageUrl = (imagePath: string) => {
@@ -80,7 +71,7 @@ const Destinations = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-3 gap-8 mb-16">
           {destinations.map((destination, index) => {
             const Icon = destination.icon;
             const name = t(destination.nameKey);
@@ -96,11 +87,7 @@ const Destinations = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     onError={(e) => {
-                      console.error(`Failed to load image: ${destination.image}`);
                       e.currentTarget.style.opacity = '0';
-                    }}
-                    onLoad={() => {
-                      console.log(`Successfully loaded image: ${destination.image}`);
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_20%_8%_/_0.9)] via-[hsl(220_20%_8%_/_0.5)] to-transparent pointer-events-none"></div>

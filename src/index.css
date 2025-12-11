@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 200 80% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 80% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 80% 10%;
+
+    --primary: 200 95% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 65% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 20% 96%;
+    --muted-foreground: 200 20% 40%;
+
+    --accent: 20 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 200 95% 22%;
+
+    --radius: 0.75rem;
+    
+    /* Custom design tokens for Koh Tao theme */
+    --ocean-deep: 200 95% 22%;
+    --ocean-blue: 200 90% 35%;
+    --turquoise: 180 65% 50%;
+    --coral: 20 95% 60%;
+    --sand: 40 50% 85%;
+    --tropical-green: 150 60% 45%;
+    
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(200 95% 22%), hsl(180 65% 50%));
+    --gradient-sunset: linear-gradient(135deg, hsl(20 95% 60%), hsl(30 90% 55%));
+    --gradient-hero: linear-gradient(180deg, hsl(200 95% 22% / 0.7), hsl(200 95% 22% / 0.3));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(200 95% 22% / 0.1);
+    --shadow-glow: 0 0 30px hsl(180 65% 50% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 200 60% 8%;
+    --foreground: 180 40% 95%;
+
+    --card: 200 50% 12%;
+    --card-foreground: 180 40% 95%;
+
+    --popover: 200 50% 12%;
+    --popover-foreground: 180 40% 95%;
+
+    --primary: 180 65% 50%;
+    --primary-foreground: 200 60% 8%;
+
+    --secondary: 200 40% 20%;
+    --secondary-foreground: 180 40% 95%;
+
+    --muted: 200 40% 20%;
+    --muted-foreground: 180 20% 60%;
+
+    --accent: 20 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 180 40% 95%;
+
+    --border: 200 40% 20%;
+    --input: 200 40% 20%;
+    --ring: 180 65% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}

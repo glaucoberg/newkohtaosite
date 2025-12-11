@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { toast } = useToast();
+  const navigate = useNavigate();
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -20,37 +20,20 @@ const Navigation = () => {
   }, []);
 
   const handlePlanTrip = () => {
-    const element = document.getElementById("activities");
-    if (element) {
-      const headerHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    }
+    navigate("/activities");
+    setIsOpen(false);
   };
 
   const menuItems = [
-    { label: t("nav.diveSites"), href: "#dive-sites" },
-    { label: t("nav.destinations"), href: "#destinations" },
-    { label: t("nav.activities"), href: "#activities" },
-    { label: t("nav.accommodations"), href: "#accommodations" },
-    { label: t("nav.businessDirectory"), href: "#directory" },
+    { label: t("nav.diveSites"), path: "/diving" },
+    { label: t("nav.destinations"), path: "/destinations" },
+    { label: t("nav.activities"), path: "/activities" },
+    { label: t("nav.accommodations"), path: "/accommodations" },
+    { label: t("nav.businessDirectory"), path: "/businesses" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      const headerHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-      setIsOpen(false);
-    }
+  const handleNavClick = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -64,7 +47,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <Link to="/" className="flex items-center gap-3 group cursor-pointer">
             <img 
               src="/assets/logo.png" 
               alt="Discovery Koh Tao Logo" 
@@ -81,20 +64,19 @@ const Navigation = () => {
             <span className="text-2xl font-bold bg-gradient-to-r from-[hsl(180_70%_45%)] to-[hsl(45_85%_55%)] bg-clip-text text-transparent tracking-tight">
               Koh Tao Guide
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item, index) => (
-              <a 
+              <Link 
                 key={index}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
+                to={item.path}
                 className="relative text-[hsl(180_30%_98%)]/80 hover:text-[hsl(180_70%_45%)] transition-all duration-300 font-medium text-sm tracking-wide uppercase group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[hsl(180_70%_45%)] to-[hsl(45_85%_55%)] group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -125,14 +107,14 @@ const Navigation = () => {
         <div className="md:hidden bg-[hsl(220_25%_12%)] border-t border-[hsl(220_25%_20%)] backdrop-blur-xl">
           <div className="container mx-auto px-4 py-6 space-y-4">
             {menuItems.map((item, index) => (
-              <a 
+              <Link 
                 key={index}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
+                to={item.path}
+                onClick={handleNavClick}
                 className="block py-3 text-[hsl(180_30%_98%)]/80 hover:text-[hsl(180_70%_45%)] transition-colors font-medium text-sm tracking-wide uppercase border-b border-[hsl(220_25%_20%)] last:border-0"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="pt-4 space-y-3 border-t border-[hsl(220_25%_20%)]">
               <Button 

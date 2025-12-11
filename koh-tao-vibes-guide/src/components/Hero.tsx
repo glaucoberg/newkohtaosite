@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Search, ArrowDown } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-koh-tao.jpg";
 
 const Hero = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
   const { toast } = useToast();
   const { t } = useLanguage();
 
@@ -26,23 +28,11 @@ const Hero = () => {
   };
 
   const handlePlanTrip = () => {
-    const element = document.getElementById("activities");
-    if (element) {
-      const headerHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    }
+    navigate("/activities");
   };
 
   const scrollToDiveSites = () => {
-    const element = document.getElementById("dive-sites");
-    if (element) {
-      const headerHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    }
+    navigate("/diving");
   };
 
   const scrollToNext = () => {

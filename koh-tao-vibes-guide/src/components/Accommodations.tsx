@@ -154,7 +154,6 @@ const Accommodations = () => {
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
               loading="eager"
               onError={(e) => {
-                console.error(`Failed to load beach image: ${beachImage}`);
                 e.currentTarget.style.display = 'none';
               }}
             />
